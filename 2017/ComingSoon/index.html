@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title id="title">Fosster'17</title>
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<!--Fonts - changed to Source Code Pro-->
+		<link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+		<!--CSS-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body data-ng-app="contactApp">
+		<!--Preloader-->
+		<div class="preloader-it">
+			<div class="la-anim-1"></div>
+		</div>
+		<!--/Preloader-->
+
+		<!--Container-->
+		<div class="pad-zero">
+
+			<!--Splitlayout -->
+			<div id="splitlayout" class="splitlayout reset-layout">
+
+				<!--Intro-->
+				<div class="intro">
+
+					<!--Left Content Intro-->
+					<div class="side side-left">
+
+						<!--About Nav-->
+						<div class="call-to-action about">
+								<i class="fa fa-info fa-2x"></i>
+								<i class="fa fa-times fa-2x opacity-hide"></i>
+								<span class="top"></span>
+								<span class="right"></span>
+								<span class="bottom"></span>
+								<span class="left"></span>
+						</div>
+						<!--/About Nav-->
+
+						<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 align-center content-wrap">
+
+						<!--Logo-->
+						<div class="logo align-center text-left"><img src="img/logo-dark.png" alt="logo">
+						</div>
+						<!--/Logo-->
+
+						<!--main content-->
+						<div class="main">
+
+							<!--Content with Typing Intro-->
+							<section id="home" class="section active">
+								<div  class="preloader"></div>
+								<div class="align-center text-left">
+									<span class="small-hr animated fadeInLeft"  data-animation="fadeInLeft" data-out-animation="fadeOutLeft" data-out-animation-delay="200"></span>
+									<p class="animated fadeInLeft"  data-animation="fadeInLeft" data-out-animation="fadeOutLeft" data-out-animation-delay="300"><font color="#fff">“Seek | share | elevate”</font></p>
+									<div class="type-wrap text-left">
+										<h1  class="animated fadeInLeft"  data-animation="fadeInLeft" data-out-animation="fadeOutLeft" data-out-animation-delay="900"><span id="typed" ></span></h1>
+									</div>
+
+									<div class="notify-btn main-menu">
+										<a  href="#contact" class="btn btn-default animated fadeInLeft" data-hover="Notify me" data-animation="fadeInLeft" data-animation-delay="1000" data-out-animation="fadeInLeft" data-out-animation-delay="600" data-toggle="modal" data-target="#notify-my"><span class="button-label text-left"><font color="#000">Notify me</font></span><span class="arrow-wrap"><span class="arrow"></span></span></a>
+									</div>
+								</div>
+							</section>
+							<!--/Content with Typing Intro-->
+
+							<!--Notify Form-->
+							<section id="contact" class="section text-left">
+								<div  class="preloader"></div>
+								<div class="main-menu">
+									<a class="close-notify black" href="#home" data-animation="fadeInDown" data-animation-delay="900" data-out-animation="fadeOutUp" data-out-animation-delay="100">
+										<div class="call-to-action">
+											<i class="fa fa-times fa-2x"></i>
+											<span class="top"></span>
+											<span class="right"></span>
+											<span class="bottom"></span>
+											<span class="left"></span>
+										</div>
+									</a>
+								</div>
+
+								<!--CONTENT CHANGED & <br> ADDED-->
+								<div class="notify-wrap">
+									<h3 class="wellcome-text" data-animation="fadeInLeft" data-animation-delay="900" data-out-animation="fadeOutLeft" data-out-animation-delay="100" data-ng-bind="notify || 'Keep yourself updated!!'">Keep yourself updated!!</h3>
+									<form id="notifyMe" class="contact-form" action="notify-me.php" method="post">
+										<div class="input-wrap" data-animation="fadeInLeft" data-animation-delay="100" data-out-animation="fadeOutLeft" data-out-animation-delay="900">
+											<input  data-ng-model="notify" class="col-lg-10  align-center form-control input input__field input__field--hoshi notify-input-box" name="email" placeholder="email id"  type="email">
+											<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+										</div>
+										<button type="submit" data-hover="Send" class="btn btn-default progress-button btn-submit " data-animation="fadeInUp" data-animation-delay="900" data-out-animation="fadeOutUp" data-out-animation-delay="1300">
+										<span><span class="arrow-wrap"><span class="arrow"></span></span></span>
+										</button>
+									</form>
+								</div>
+							</section>
+							<!--/Notify Form-->
+
+							<div class="copyright">
+								<ul class="social-icons">
+									<li>
+										<a href="https://www.facebook.com/FossatAmrita/" class="social-icon">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/amritafoss" class="social-icon">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/foss_at_amrita/?hl=en" class="social-icon">
+											<i class="fa fa-instagram"></i>
+										</a>
+									</li>
+								</ul>
+								<p><font color="#fff">Powered by FOSS@Amrita © 2017</font></p>
+							</div>
+						</div>
+						<!--/main content-->
+
+						</div>
+					</div>
+					<!--/Left Content Intro-->
+
+					<!--Right Content Intro-->
+					<div id="astronomy_eff" class="side side-right">
+						<div id="astronomy">
+							<canvas id="demo-canvas"></canvas>
+						</div>
+						<!--Contect Nav-->
+						<div class="call-to-action contact">
+								<i class="fa fa-envelope fa-2x"></i>
+								<i class="fa fa-times fa-2x opacity-hide"></i>
+								<span class="top"></span>
+								<span class="right"></span>
+								<span class="bottom"></span>
+								<span class="left"></span>
+						</div>
+						<!--/Contect Nav-->
+
+						<div class="counter-content">
+							<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 align-center text-left">
+								<p class="tagline">Breaking the dogmas, one line of code at a time.</p>
+
+
+								<!-- Counter-->
+								<!-- <div id="countdown">
+									<span class="days">0</span>
+								</div>
+								<span class="small-hr"></span>
+								<span class="remain-days">More Days</span> -->
+								<!--/Counter -->
+
+							</div>
+						</div>
+					<div class="trans-overlay-dark"></div>
+					</div>
+					<!--/Right Content Intro-->
+				</div>
+				<!--/Intro-->
+
+				<!--About Section-->
+				<div class="page page-left">
+					<div  class="page-inner full-height">
+						<div class="container align-center detail-info">
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-sm-3">
+									<h3><u><font color="#fff">About</font></u></h3>
+								</div>
+								<div class="col-lg-9 col-md-8 col-sm-8 col-xs-9">
+									<p class="tagline"><font color="#fff">Addressing key social and real life issues by creating an optimal solution using respective areas of expertise. We seek to challenge an array of social issues, covering both ends of the modern day societal spectrum.</font></p>
+									<span class="small-hr"></span>
+									<!--Client Slider-->
+									<div id="qualities">
+										<div class="qualities">
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-gavel"></i></span>
+												<span class="qual-tag">Hackathon</span>
+												<span class="qual-desc">
+													Our sole aim is to facilitate real world changes, to address key social issues with the innovative field of technology.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-sitemap"></i></span>
+												<span class="qual-tag">Summit</span>
+												<span class="qual-desc">
+													Consists of talks, platform to showcase innovative ideas and projects. Also a dedicated slot
+													called "An hour of innovation".
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-cog"></i></span>
+												<span class="qual-tag-exposed">eXPosed</span>
+												<span class="qual-desc">
+													The event where young prodigies come into the limelight.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-code-fork"></i></span>
+												<span class="qual-tag">Workshop</span>
+												<span class="qual-desc">
+													Workshops conducted by various organisations and collaborative workshop with team bi0s,
+													India's one of the best CTF team.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-calendar-o"></i></span>
+												<span class="qual-tag">Events</span>
+												<span class="qual-desc">
+													Gaming competitions, Cubing competitions, Debugging contest, AR/VR Stalls.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-trophy"></i></span>
+												<span class="qual-tag"> Misc</span>
+												<span class="qual-desc">
+													Stalls by startups, organisations, various branches from Amrita University Exibits.
+												</span>
+											</div>
+										</div>
+									</div>
+									<!--/Client Slider-->
+								</div>
+								<!--Team Slider-->
+								<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-7 col-md-8 col-sm-8 col-xs-9 team-sec">
+									<p class="tagline"><font color="#fff">Core Committee</font></p>
+									<span class="small-hr"></span>
+									<div id="team">
+										<div class="team">
+											<div class="item">
+												<div class="team-img-wrap">
+													<img src="img/team1.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<span class="name"> Siddharth Kumar</span>
+												<span class="desg">Co-Organiser</span>
+											</div>
+											<div class="item" >
+												<div class="team-img-wrap">
+													<img src="img/team2.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<span class="name"> Aniketh Girish</span>
+												<span class="desg"> Web Development lead, Co-Organiser</span>
+											</div>
+											<div class="item" >
+												<div class="team-img-wrap">
+													<img src="img/team3.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<span class="name"> Viboothi Anand</span>
+												<span class="desg"> promotions lead, Graphics</span>
+											</div>
+											<div class="item" >
+												<div class="team-img-wrap">
+													<img src="img/team4.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<span class="name"> Akash Krishnan</span>
+												<span class="desg">Design, Co-Organiser	</span>
+											</div>
+											<div class="item" >
+												<div class="team-img-wrap">
+													<img src="img/team5.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<span class="name"> Rahul Krishnan</span>
+												<span class="desg">Co-Organiser</span>
+											</div>
+											<div class="item" >
+												<div class="team-img-wrap">
+													<img src="img/team6.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<span class="name"> Satya Pramod</span>
+												<span class="desg"> Design Lead</span>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<!--/Team Slider-->
+							</div>
+						</div>
+						<div class="trans-overlay-dark-about"></div>
+					</div>
+				</div>
+				<!--/About Section-->
+
+				<!--Contact Section-->
+				<div class="page page-right">
+					<div  class="page-inner full-height">
+						<div class="container align-center detail-info">
+							<div class="row">
+							<div data-ng-controller="ContactController" class="panel-body">
+								<h3 class="col-lg-12 col-xs-9" data-ng-bind="formData.inputName||'Tell us what do you feel!'">Tell us what do you feel!</h3>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-9">
+									<form data-ng-submit="submit(contactform, $event)"  name="contactform" method="post" class="form-horizontal" role="form">
+										<div class="form-group input--hoshi" data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+											<div class="input-wrap">
+												<input data-ng-model="formData.inputName" type="text" class="form-control input__field input input__field--hoshi" id="inputName" name="inputName" placeholder="Name" required>
+												<label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1" ></label>
+											</div>
+										</div>
+										<div class="form-group  input--hoshi" data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+											<div class="input-wrap">
+												<input data-ng-model="formData.inputEmail" type="email" class="form-control input input__field input__field--hoshi" placeholder="Your Email" id="inputEmail" name="inputEmail" required>
+												<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+											</div>
+										</div>
+										<div class="form-group  input--hoshi" data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+											<div class="input-wrap">
+												<textarea data-ng-model="formData.inputMessage" class="form-control input input__field input__field--hoshi" rows="4" id="inputMessage" name="inputMessage" placeholder="message" required></textarea>
+												<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="align-center">
+												<button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+													<span><span class="arrow-wrap"><span class="arrow"></span></span></span>
+												</button>
+											</div>
+										</div>
+									</form>
+									<p data-ng-class="result">{{ resultMessage }}</p>
+								</div>
+								<div class="col-lg-3 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 col-xs-9">
+									<div class="align-center address-detail">
+									<p><font color="#fff">Amrita School of Engineering, <br/>
+										Amritapuri Campus,Amritapuri, Clappana,
+										<br/>P.O,Vallikavu, </br>
+										Vallikavu, Kerala 690525.</font></p>
+									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-envelope" style="color: #fff"></i></div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
+										<a href="mailto:amritafosster17@gmail.com" target="_blank"><font color="#fff">amritafosster17@gmail.com</font></a>
+									</div>
+
+									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-envelope" style="color: #fff"></i></div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
+										<a href="mailto:amritapurifoss@gmail.com" target="_blank"><font color="#fff">amritapurifoss@gmail.com</font></a>
+									</div>
+
+									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-globe" style="color: #fff"></i></div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
+										<a href="http://foss.amrita.ac.in/" target="_blank"><font color="#fff">foss.amrita.ac.in</font></a>
+									</div>
+
+									<div class="col-lg-12  pad-left-zero map">
+									<a class="" href="" target="_blank">
+										<span class=""><font color="#fff">FAQ</font></span><span class="go-arrow"></span>
+									</a>
+									</div>
+								</div>
+
+								</div>
+								<!--Google Map-->
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.669647919894!2d76.48946201432449!3d9.093827993475859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0602dce0d88a27%3A0xae501e8586522cc3!2sAmrita+School+of+Engineering!5e0!3m2!1sen!2sin!4v1503741211244" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								<!--/Google Map-->
+							</div>
+							</div>
+						</div>
+
+						<div class="trans-overlay-dark-contact"></div>
+            		</div>
+				</div>
+				<!--/Contact Section-->
+
+			</div>
+			<!-- /Splitlayout -->
+
+		</div>
+		<!-- /Container -->
+
+		<!-- Scripts -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/cbpSplitLayout.js"></script>
+		<script src="js/jquery.countdown.js"></script>
+		<script src="js/typed.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/input-text.js"></script>
+		<script src="js/notifyMe.js"></script>
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+		<script src="js/jquery.placeholder.js"></script>
+		<script src="js/init.js"></script>
+	</body>
+</html>

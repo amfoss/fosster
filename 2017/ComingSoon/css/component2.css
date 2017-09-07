@@ -1,0 +1,354 @@
+@charset "utf-8";
+html, body, 
+.container {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	overflow-y: scroll;
+	background: #333;
+}
+
+.splitlayout {
+	position: relative;
+	overflow-x: hidden;
+	min-height: 100%;
+	width: 100%;
+}
+
+/* Intro sides */
+.side {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+}
+
+.open-left .side,
+.open-right .side {
+	cursor: default;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 499;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.side-left .overlay {
+	background: rgba(0,0,0,0.7);
+}
+
+.side-right .overlay {
+	background: rgba(0,0,0,0.3);
+}
+
+.side-left {
+	left: 0;
+	background: #47a3da;
+	color: #fff;
+}
+
+.side-right {
+	right: 0;
+	background: #fff;
+	color: #47a3da;
+}
+
+/* Intro content, profile image and name, back button 
+.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity:1;
+	visibility:visible;
+	padding: 0 1em;
+	width: 100%;
+	cursor: pointer;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	-ms-transform: translateY(-50%) translateX(-50%);
+	    transform: translateY(-50%) translateX(-50%);
+}*/
+
+.profile {
+	margin: 0 auto;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background: #47a3da;
+}
+
+.profile img {
+	max-width: 100%;
+	border-radius: 50%;
+	opacity: 0.6;
+}
+
+
+.back {
+	position: fixed;
+	top: 50%;
+	z-index: 500;
+	display: block;
+	visibility: hidden;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	-webbkit-transform:translate(0, -50%);
+	transform:translate(0, -50%);
+}
+
+.mobile-layout .back { /* fixed positioning will make this not clickable after scrolling on some mobile devices */
+	position: absolute;
+}
+
+
+.open-right .back-left,
+.open-left .back-right {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	pointer-events: auto;
+}
+
+.back:hover {
+	color: #ddd;
+}
+
+/* Pages */
+.page {
+	position: relative;
+	top: 0;
+	overflow: auto;
+	min-height: 100%;
+	width: 93%;
+	height: auto;
+	font-size: 1.4em;
+	-webkit-backface-visibility: hidden;
+}
+
+.page-right {
+	left: 7%;
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	    transform: translateX(100%);
+}
+
+.page-left {
+	left: 0;
+	color: #fff;
+	text-align: right;
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	    transform: translateX(-100%);
+}
+
+
+
+/* All transitions */
+.side,
+.page {
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+}
+
+.overlay {
+	-webkit-transition: opacity 0.5s ease-in-out, visibility 0.1s 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out, visibility 0.1s 0.5s ease-in-out;
+}
+
+.main {
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.main h1,
+.back {
+	-webkit-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+/* Open and close */
+
+/* We need to set the position and overflow for the respective page scroll */
+.reset-layout .page,
+.splitlayout.open-right .page-left,
+.splitlayout.open-left .page-right,
+.splitlayout.close-right .page-left,
+.splitlayout.close-left .page-right {
+	position: absolute;
+	overflow: hidden;
+	height: 100%;
+}
+
+.splitlayout.open-right .page-right,
+.splitlayout.open-left .page-left {
+	position: relative;
+	overflow: auto;
+	height: auto;
+}
+
+.open-right .side-left .overlay,
+.open-left .side-right .overlay {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+/* Right side open */
+.open-right .side-left {
+	-webkit-transform: translateX(-61%) scale(.5);
+	-ms-transform: translateX(-61%) scale(.5);
+	    transform: translateX(-61%) scale(.5);
+}
+
+.open-right .side-right {
+	z-index: 200;
+	-webkit-transform: translateX(-186%);
+	-ms-transform: translateX(-186%);
+	    transform: translateX(-186%);
+}
+
+.close-right .side-right {
+	z-index: 200;
+}
+
+.open-right .side-right .main {
+	-webkit-transform: translateY(-50%) translateX(-80%) scale(0.6);
+	-ms-transform: translateY(-50%) translateX(-80%) scale(0.6);
+	transform: translateY(-50%) translateX(-80%) scale(0.6);
+	opacity: 0;
+    visibility: hidden;
+}
+
+.open-right .page-right {
+	-webkit-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	    transform: translateX(0%);
+}
+
+/* Left side open */
+.open-left .side-right {
+	-webkit-transform: translateX(61%) scale(.5);
+	-ms-transform: translateX(61%) scale(.5);
+	    transform: translateX(61%) scale(.5);
+}
+
+.open-left .side-left {
+	z-index: 200;
+	-webkit-transform: translateX(186%);
+	-ms-transform: translateX(186%);
+	    transform: translateX(186%);
+}
+
+.close-left .side-left {
+	z-index: 200;
+}
+
+.open-left .side-left .main {
+	-webkit-transform: translateY(-50%) translateX(80%) scale(0.6);
+	-ms-transform: translateY(-50%) translateX(80%) scale(0.6);
+	 transform: translateY(-50%) translateX(80%) scale(0.6);
+	opacity: 0;
+    visibility: hidden;
+}
+
+.open-left .codropsheader {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.3s, visibility 0.1s 0.3s;
+	transition: opacity 0.3s, visibility 0.1s 0.3s;
+}
+
+.open-left .page-left {
+	-webkit-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	    transform: translateX(0%);
+}
+
+.preloader {
+    background: #fff none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.preloader span {
+    height: 60px;
+    left: 50%;
+    margin: -30px 0 0 -30px;
+    position: absolute;
+    top: 50%;
+    width: 60px
+}
+.preloader span:before,
+.preloader span:after {
+      -webkit-animation: expand 3s;
+    animation: expand 3s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    border: solid 3px #000;
+    border-radius: 50%;
+    content: " ";
+    height: 2px;
+    left: 24px;
+    opacity: 0;
+    position: absolute;
+    top: 24px;
+    width: 2px;
+}
+.preloader span:after {
+    -webkit-animation-delay: 1.5s
+}
+
+.main .section {
+    height: 0;
+    visibility: hidden;
+    width: 100%;
+	position:relative;
+}
+
+.main .section.active {
+    height: 100%;
+	visibility: visible
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

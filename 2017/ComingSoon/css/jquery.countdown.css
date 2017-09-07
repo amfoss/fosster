@@ -1,0 +1,21 @@
+
+ul#countdown {
+  list-style: none;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+ul#countdown li { display: inline-block; }
+
+
+
+ul#countdown li.seperator {
+  font-size: 80px;
+  vertical-align: top;
+}
+
+ul#countdown li p {
+  color: #a7abb1;
+  font-size: 25px;
+}
