@@ -91,22 +91,25 @@ p, .address-detail a {
   content: "¡"; }
 
   /*======================================
-  8.4 - Countdown
+                  Countdown
   ======================================*/
-  #countdown1 {
+  #countdown {
     text-align: center;
     max-width: 720px;
     margin: 0 auto;
   }
   @media screen and (min-width: 480px) {
-    #countdown1 {
-      margin-top: 25px;
+    #countdown {
+      margin-top: 60px;
+      margin-right: 25px;
+
     }
   }
   @media screen and (max-width: 480px) {
     .col-countdown {
       width: 50%;
-      margin-top: 25px;
+      margin-top: 60px;
+      margin-right: 25px;
     }
   }
   .countdown-amount {
