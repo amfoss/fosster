@@ -155,29 +155,29 @@
 								<div class="section-main row">
                 <div class="col-xs-12">
                   <!-- countdown -->
-                  <div id="countdown" class="animation-04">
+                  <div id="countdown" class="animation-04" ng-controller="countDownCtrl">
                     <div class="row">
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount days"></div>
+                          <div class="countdown-amount days">{{days}}</div>
                           <div class="countdown-period days_ref">Days</div>
                         </div>
                       </div>
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount hours"></div>
+                          <div class="countdown-amount hours">{{hours}}</div>
                           <div class="countdown-period hours_ref">Hours</div>
                         </div>
                       </div>
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount minutes"></div>
+                          <div class="countdown-amount minutes">{{minutes}}</div>
                           <div class="countdown-period minutes_ref">Minutes</div>
                         </div>
                       </div>
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount seconds"></div>
+                          <div class="countdown-amount seconds">{{seconds}}</div>
                           <div class="countdown-period seconds_ref">Seconds</div>
                         </div>
                       </div>
@@ -566,9 +566,9 @@
 		<script src="js/jquery.placeholder.js"></script>
 		<script src="js/init.js"></script>
 
-		<script src='assets/js/vendor/vendor.js'></script>
-	  <script src='assets/js/variable.js'></script>
-	  <script src='assets/js/main.js'></script>
+		<!--<script src='assets/js/vendor/vendor.js'></script>-->
+	  <!--<script src='assets/js/variable.js'></script>-->
+	  <!--<script src='assets/js/main.js'></script>-->
 
 	</body>
 </html>
