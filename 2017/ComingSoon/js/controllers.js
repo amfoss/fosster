@@ -36,3 +36,32 @@ app.controller('ContactController', function ($scope, $http) {
         }
     }
 });
+
+app.controller('countDownCtrl',function($scope,$interval){
+    var end = new Date('12/01/2017 10:1 AM'); //Event Date
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+
+    var showRemaining = function() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+           $interval.cancel(promise);
+            alert("Timer expired"); //What should happen if Timer is finished
+
+            return;
+        }
+        $scope.days = Math.floor(distance / _day);
+        $scope.hours = Math.floor((distance % _day) / _hour);
+        $scope.minutes = Math.floor((distance % _hour) / _minute);
+        $scope.seconds = Math.floor((distance % _minute) / _second);
+
+    };
+
+    var promise = $interval(showRemaining,1000);
+
+});
