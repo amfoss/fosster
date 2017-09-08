@@ -63,7 +63,7 @@ $(window).on("resize", function () {
 /***** Pogody function start *****/
 function pogody(){
 	/*Counter JS*/
-	$('#countdown').countdown({
+	$('#countdown1').countdown({
 		date: '8/24/2017',
 	});
 	/*About Owl JS*/

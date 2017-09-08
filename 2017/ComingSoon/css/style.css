@@ -20,8 +20,8 @@ Project:	Pogody
 /****************************/
 /** Reset **/
 /****************************/
-html, body, div, span, applet, object, iframe, h1, h3, .side-right #countdown span,
-.side-right #countdown li.seperator, h2, h3, h4, h5, h6, p, .address-detail a, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h3, .side-right #countdown1 span,
+.side-right #countdown1 li.seperator, h2, h3, h4, h5, h6, p, .address-detail a, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -64,8 +64,8 @@ a:focus {
   text-decoration: none;
   outline: none; }
 
-h1, h3, .side-right #countdown span,
-.side-right #countdown li.seperator {
+h1, h3, .side-right #countdown1 span,
+.side-right #countdown1 li.seperator {
   color: #000;
   font-size: 80px;
   letter-spacing: -1px;
@@ -89,6 +89,75 @@ p, .address-detail a {
 
 .force-UTF-8 {
   content: "¡"; }
+
+  /*======================================
+  8.4 - Countdown
+  ======================================*/
+  #countdown1 {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 480px) {
+    #countdown1 {
+      margin-top: 25px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .col-countdown {
+      width: 50%;
+      margin-top: 25px;
+    }
+  }
+  .countdown-amount {
+    line-height: 1;
+    font-size: 38px;
+    letter-spacing: 0;
+  }
+  @media screen and (min-width: 768px) {
+    .countdown-amount {
+      font-size: 54px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .countdown-amount {
+      font-size: 64px;
+    }
+  }
+  .countdown-period {
+    -webkit-border-top-left-radius: 50px;
+    -moz-border-top-left-radius: 50px;
+    border-top-left-radius: 50px;
+    -webkit-border-top-right-radius: 50px;
+    -moz-border-top-right-radius: 50px;
+    border-top-right-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    -webkit-border-bottom-right-radius: 50px;
+    -moz-border-bottom-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-clip: padding-box;
+    font-weight: 400;
+    letter-spacing: 5px;
+    padding-left: 5px;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 3px 20px 3px 25px;
+    margin-top: 5px;
+  }
+  section {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+.countdown-period {
+  /* countdown period */
+  background-color: rgba(62, 68, 89, 0.9);
+  color: rgba(248, 250, 255, 0.99);
+}
 
 /****************************/
 /** Main **/
@@ -184,12 +253,12 @@ p.tagline, .address-detail a.tagline {
   background-repeat: no-repeat;
   color: #000;
   right: 0; }
-  .side-right #countdown {
+  .side-right #countdown1 {
     padding-top: 28px; }
   .side-right .counter-content {
     padding-top: 35%; }
-  .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     color: #000;
     line-height: 97px; }
   .side-right .trans-overlay-dark {
@@ -819,8 +888,8 @@ color: #fff; }
 /* Mediaqueries */
 /*****************************************************/
 @media only screen and (max-width: 1710px) {
-  h1, h3, .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  h1, h3, .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     font-size: 65px; }
 
   .open-left .about {
@@ -829,8 +898,8 @@ color: #fff; }
   .open-right .contact {
     right: 30px; } }
 @media only screen and (max-width: 1530px) {
-  h1, h3, .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  h1, h3, .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     font-size: 50px; }
 
   h3 {
@@ -840,7 +909,7 @@ color: #fff; }
   .detail-info {
     padding-top: 8%; }
 
-  .side-right #countdown span, .side-right #countdown li.seperator {
+  .side-right #countdown1 span, .side-right #countdown1 li.seperator {
     line-height: 59px; }
 
   .btn {
@@ -899,8 +968,8 @@ color: #fff; }
     .page-right .map .go-arrow {
       border-width: 5px 0 5px 10px; } }
 @media only screen and (max-width: 1082px) {
-  h1, h3, .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  h1, h3, .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     font-size: 40px; }
 
   h3 {
@@ -911,7 +980,7 @@ color: #fff; }
     font-size: 20px;
     line-height: 35px; }
 
-  .side-right #countdown {
+  .side-right #countdown1 {
     padding-top: 8px; }
   .side-right .counter-content {
     padding-top: 41%; }
@@ -947,8 +1016,8 @@ color: #fff; }
   .open-left .about {
     left: 20px; } }
 @media only screen and (max-width: 870px) {
-  h1, h3, .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  h1, h3, .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     font-size: 30px; }
 
   h3 {
@@ -974,8 +1043,8 @@ color: #fff; }
   .notify-wrap .form-control:-ms-input-placeholder {
     font-size: 12px; } }
 @media only screen and (max-width: 766px) {
-  h1, h3, .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  h1, h3, .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     font-size: 50px; }
 
   h3 {
@@ -1100,8 +1169,8 @@ color: #fff; }
   .page-right .icon {
     padding-top: 8px; } }
 @media only screen and (max-width: 414px) {
-  h1, h3, .side-right #countdown span,
-  .side-right #countdown li.seperator {
+  h1, h3, .side-right #countdown1 span,
+  .side-right #countdown1 li.seperator {
     font-size: 35px; } }
 
 /*# sourceMappingURL=style.css.map */
